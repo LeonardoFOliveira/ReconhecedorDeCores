@@ -26,13 +26,15 @@
    LearnMoreLinks,
    ReloadInstructions,
  } from 'react-native/Libraries/NewAppScreen';
+import Camera from './views/camera';
 import Home from './views/home';
 
  const App = () => {
 
    return (
      <SafeAreaView style={styles.container}>
-       <Home></Home>
+       {/* <Home></Home> */}
+       <Camera></Camera>
      </SafeAreaView>
    );
  };

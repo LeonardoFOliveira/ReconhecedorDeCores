@@ -12,6 +12,8 @@ target 'ReconhecedorDeCores' do
     :hermes_enabled => false
   )
 
+  pod 'react-native-camera', :path => '../node_modules/react-native-camera'
+
   target 'ReconhecedorDeCoresTests' do
     inherit! :complete
     # Pods for testing
