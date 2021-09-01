@@ -2,10 +2,10 @@ import React from 'react';
 import {Text, Button, View} from 'react-native';
 import Styles from './style';
 
-const Home = () => {
+const Home = (props: any) => {
 
     function abrirCamera(){
-
+        props.navigation.navigate("Camera")
     }
 
     function abrirGaleria(){
