@@ -1,6 +1,7 @@
 import React from 'react';
 import {Text, Button, View} from 'react-native';
 import Styles from './style';
+import { ImageLibraryOptions, launchImageLibrary } from 'react-native-image-picker';
 
 const Home = (props: any) => {
 
@@ -9,7 +10,28 @@ const Home = (props: any) => {
     }
 
     function abrirGaleria(){
-
+        let options: ImageLibraryOptions = {
+            mediaType: 'photo',
+            selectionLimit: 1
+          };
+          launchImageLibrary(options, (response) => {
+            console.log('Response = ', response);
+      
+            if (response.didCancel) {
+              console.log('User cancelled image picker');
+            } else if (response.errorCode) {
+              console.log('ImagePicker Error: ', response.errorMessage);
+            } 
+            else if (response.assets) {
+              const source = { uri: response.assets[0].base64 };
+              console.log('response', JSON.stringify(response));
+            //   this.setState({
+            //     filePath: response,
+            //     fileData: response.data,
+            //     fileUri: response.uri
+            //   });
+            }
+          });
     }
 
     return (
