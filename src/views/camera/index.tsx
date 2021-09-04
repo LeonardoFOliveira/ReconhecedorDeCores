@@ -3,14 +3,15 @@ import { Text, TouchableOpacity, View } from 'react-native';
 import { RNCamera } from 'react-native-camera';
 import Styles from './styles';
 
-const Camera = () => {
+const Camera = (props: any) => {
     let camera: any;
 
     const takePicture = async () => {
         if (camera) {
           const options = { quality: 0.5, base64: true };
           const data = await camera.takePictureAsync(options);
-          console.log(data.uri);
+          console.log(data.base64);
+          props.navigation.navigate("ImageDetails", {image: data.uri})
         }
       };
 

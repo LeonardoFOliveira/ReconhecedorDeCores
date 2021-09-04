@@ -25,11 +25,8 @@ const Home = (props: any) => {
             else if (response.assets) {
               const source = { uri: response.assets[0].base64 };
               console.log('response', JSON.stringify(response));
-            //   this.setState({
-            //     filePath: response,
-            //     fileData: response.data,
-            //     fileUri: response.uri
-            //   });
+              console.log( response.assets[0].base64);
+              props.navigation.navigate("ImageDetails", {image: response.assets[0].uri})
             }
           });
     }
