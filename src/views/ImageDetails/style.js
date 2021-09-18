@@ -10,11 +10,25 @@ const Styles = StyleSheet.create({
         flex: 2
     },
     containerDetails: {
-        flex: 1
+        flex: 1,
+        borderTopRightRadius: 6,
+        borderTopLeftRadius: 6,
+        borderTopWidth: 3
+ //       justifyContent: "center"
     },
     textCentralize: {
+        
+ //       paddingBottom: 100
+    },
+    textHeaderDetail: {
         textAlign: "center",
-        paddingBottom: 100
+        fontSize: 18,
+        fontWeight: "bold"
+    },
+    textInfoDetail: {
+        textAlign: "center",
+        fontSize: 16,
+        justifyContent: "center"
     }
    });
    

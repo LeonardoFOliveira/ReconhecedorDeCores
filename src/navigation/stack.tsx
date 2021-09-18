@@ -10,6 +10,6 @@ export default () => (
     <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={Home}/>
         <Stack.Screen name="Camera" component={Camera}/>
-        <Stack.Screen name="ImageDetails" component={ImageDetails}/>
+        <Stack.Screen name="ImageDetails" component={ImageDetails} options={{title: 'Detalhes Imagem'}}/>
     </Stack.Navigator>
 )
