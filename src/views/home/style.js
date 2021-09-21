@@ -26,6 +26,15 @@ const Styles = StyleSheet.create({
     textCentralize: {
         textAlign: "center",
         paddingBottom: 100
+    },
+    button : {
+        backgroundColor: '#0000FF',
+        borderRadius: 5,
+        height: 300,
+        padding: 130,
+        paddingHorizontal: 20,
+        alignSelf: 'center',
+        margin: 20,
     }
    });
    

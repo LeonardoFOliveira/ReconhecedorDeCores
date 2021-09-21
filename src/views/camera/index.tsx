@@ -33,7 +33,7 @@ const Camera = (props: any) => {
             }}
           />
           <View style={{ flex: 0, flexDirection: 'row', justifyContent: 'center' }}>
-            <TouchableOpacity onPress={takePicture.bind(this)} style={Styles.capture}>
+            <TouchableOpacity accessible={true} accessibilityLabel='Botão SNAP para capturar a foto' onPress={takePicture.bind(this)} style={Styles.capture}>
               <Text style={{ fontSize: 14 }}> SNAP </Text>
             </TouchableOpacity>
           </View>
